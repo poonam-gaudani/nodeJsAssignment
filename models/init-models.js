@@ -1,13 +1,11 @@
 var DataTypes = require("sequelize").DataTypes;
 var _FEEDS = require("./feeds");
 var _FEEDUSERACCESS = require("./feeduseraccess");
-var _SEQUELIZEMETA = require("./sequelizemeta");
 var _USERS = require("./users");
 
 function initModels(sequelize) {
   var FEEDS = _FEEDS(sequelize, DataTypes);
   var FEEDUSERACCESS = _FEEDUSERACCESS(sequelize, DataTypes);
-  var SEQUELIZEMETA = _SEQUELIZEMETA(sequelize, DataTypes);
   var USERS = _USERS(sequelize, DataTypes);
 
   FEEDUSERACCESS.belongsTo(FEEDS, { as: "feed", foreignKey: "feed_id"});
@@ -22,7 +20,6 @@ function initModels(sequelize) {
   return {
     FEEDS,
     FEEDUSERACCESS,
-    SEQUELIZEMETA,
     USERS,
   };
 }
