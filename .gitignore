@@ -1,0 +1,7 @@
+# Node artifact files
+node_modules/
+
+# Enviornment
+.env
+
+package-lock.json
