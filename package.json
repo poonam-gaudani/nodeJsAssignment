@@ -2,9 +2,11 @@
   "name": "nodejsassignment",
   "version": "1.0.0",
   "description": "Nodejs assignment using mysql with JWt auth method",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js",
+    "modelGenerator": "node -r ./utils/sequelizeAuto.js"
   },
   "repository": {
     "type": "git",
@@ -17,8 +19,15 @@
   },
   "homepage": "https://github.com/poonam-gaudani/nodeJsAssignment#readme",
   "dependencies": {
+    "crypto": "^1.0.1",
+    "dotenv": "^16.3.1",
     "express": "^4.18.2",
+    "express-validation": "^4.1.0",
     "fs": "^0.0.1-security",
-    "sequelize": "^6.33.0"
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.6.1",
+    "nodemon": "^3.0.1",
+    "sequelize": "^6.33.0",
+    "sequelize-auto": "^0.8.8"
   }
 }
